@@ -1,6 +1,6 @@
 # Dockers
 
-docker build -t <IMAGENAME> .
+`docker build -t <IMAGENAME> .`
 
 ### create a container and keep it running forever
 `docker run -itd --name <CONTAINERNAME> <IMAGENAME> bash`

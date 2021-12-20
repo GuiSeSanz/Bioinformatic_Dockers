@@ -41,8 +41,7 @@ mat_round = round(mat)
 obj$preprocess(count_normalize=TRUE, logt=TRUE)
 obj$dim_reduction(5000, 'Var')
 
-train_config <- ('val_frac' = 0.2, 'seed' = 0, 'batch_size' = 128, 
-                     'cuda' = FALSE, 'epochs' = 15)
+train_config <- list('val_frac' = 0.2 , 'seed' = 0, 'batch_size' = 128,'cuda' = FALSE, 'epochs' = 15)
 
 obj$train_classifier(config=train_config, cmat=TRUE) # Creates confusion matrix on the validation data
 

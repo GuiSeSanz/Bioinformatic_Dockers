@@ -1,0 +1,7 @@
+This paper was excluded from the review because of the declarations from the authors:
+
+Important: this repository will not be further developed and maintained because we have shown 
+and believe that graph neural networks or graph convolutional networks are incorrect and useless for
+modeling molecules (see our paper in NeurIPS 2020). Please consider switching to our new and simple
+machine learning model called quantum deep field.
+
