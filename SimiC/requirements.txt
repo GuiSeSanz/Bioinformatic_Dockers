@@ -1,0 +1,13 @@
+pandas==0.25.3 #done
+numpy==1.21.2 #done
+freetype-py==2.2.0 #done
+cvxpy==1.0.10 #done
+# scikit-learn==0.22.2.post1
+scikit-learn==1.0 #done
+scipy==1.1.0 #done
+ipdb==0.11#done
+matplotlib==3.0.2#done
+requests==2.21.0#done
+jupyter==1.0.0#done
+
+
