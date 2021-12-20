@@ -17,3 +17,6 @@
 ### copy files from the container to the host or vice versa
 `docker cp <src-path> <container>:<dest-path>`
 `docker cp <container>:<src-path> <local-dest-path>`
+
+### A trabajar!
+<img src="https://giphy.com/media/7NoNw4pMNTvgc/giphy.gif" width="80" height="80" />
