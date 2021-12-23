@@ -1,4 +1,5 @@
 *.pkl
 *.xlsx
 *.zip
-
+Testing/
+nohup.out
