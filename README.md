@@ -2,19 +2,22 @@
 
 `docker build -t <IMAGENAME> .`
 
-### create a container and keep it running forever
+### Create a container and keep it running forever (detached mode)
 `docker run -itd --name <CONTAINERNAME> <IMAGENAME> bash`
 
-### create a container and run it
+### Create a container and run it
 `docker run -it <IMAGENAME> bash`
 
-### enter the container interactively
-`docker exec -it <CONTAINERNAME> /bin/bash`
+### Enter an existing and running container interactively
+`docker exec -it <CONTAINERNAME> bash`
 
-### launch a command to the container
+### Enter a stoped container
+`docker start -ai <CONTAINERNAME> bash`
+
+### Launch a command to the container
 `docker exec -it <CONTAINERNAME> Rscript /ImputationSaver/ImputeData.R`
 
-### copy files from the container to the host or vice versa
+### Copy files from the container to the host or vice versa
 `docker cp <src-path> <container>:<dest-path>`
 `docker cp <container>:<src-path> <local-dest-path>`
 
