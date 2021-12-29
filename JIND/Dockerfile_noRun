@@ -1,0 +1,44 @@
+FROM python:3.6.8
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \ 
+    apt-utils pkg-config build-essential wget software-properties-common \
+    libssl-dev curl libcurl4-openssl-dev liblapack-dev libopenblas-base \
+    libopenblas-dev gfortran libpng-dev libcairo2-dev libxml2-dev \ 
+    libfontconfig1-dev libmagick++-dev libpq-dev libhdf5-dev git nano locate
+
+# Install R4
+RUN wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+RUN add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+RUN apt-get install -y --no-install-recommends r-base r-base-core r-recommended r-base-dev
+RUN R -e "install.packages('reticulate', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('Seurat', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+RUN R -e "install.packages('devtools', dependencies=TRUE, repos='http://cran.rstudio.com/')"
+
+RUN wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
+RUN bash Anaconda3-2021.11-Linux-x86_64.sh -b -p /opt/conda
+
+RUN pip3 install --upgrade pip
+
+# get the Git repository
+WORKDIR /
+RUN git clone https://github.com/mohit1997/JIND
+WORKDIR /JIND
+RUN pip install -r requirements.txt
+RUN pip install -e .
+
+
+
+
+### create the conda environment runs faster i dont know why
+# ENV PATH="/opt/conda/bin:$PATH"
+
+# SHELL ["/bin/bash", "--login", "-c"]
+# RUN /bin/sh -c "conda create -n JIND python=3.6.8"
+# RUN conda init bash
+# RUN conda activate JIND 
+
+# library(reticulate)
+# reticulate::use_python("/usr/local/bin/python")
+# reticulate::py_config()

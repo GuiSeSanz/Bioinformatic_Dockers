@@ -46,3 +46,10 @@ train_config <- list('val_frac' = 0.2 , 'seed' = 0, 'batch_size' = 128,'cuda' = 
 obj$train_classifier(config=train_config, cmat=TRUE) # Creates confusion matrix on the validation data
 
 obj$wrapper('self', config=train_config, cmat=TRUE)
+
+
+
+
+
+jind$annotate(train_data, test_data, train_labels, config)
+
