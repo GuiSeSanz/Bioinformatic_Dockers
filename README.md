@@ -7,7 +7,8 @@
 
 ### Create a container and run it
 `docker run -it <IMAGENAME> bash`
-# add a custom name to this container
+
+##### add a custom name to this container
 `docker run -d <CustomName>  -it <IMAGENAME> bash`
 
 ### Enter an existing and running container interactively
