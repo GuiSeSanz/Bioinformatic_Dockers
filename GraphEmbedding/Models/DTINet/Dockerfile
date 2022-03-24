@@ -12,12 +12,4 @@ pkg-config git nano mlocate libprotobuf-dev wget build-essential
 WORKDIR /
 RUN git clone https://github.com/luoyunan/DTINet.git
 WORKDIR /DTINet/src
-# RUN unzip leml-imf-src.zip
-# WORKDIR /DTINet/src/leml-imf
-# RUN make
-
-# RUN matlab -nodisplay -nosplash -nodesktop -r "run('DTINet.m');exit;"
-
-# a904346@alumni.unav.es
-# aopATo41k49dmAMrntbOVr4125
 
