@@ -5,8 +5,14 @@
 ### Create a container and keep it running forever (detached mode)
 `docker run -itd --name <CONTAINERNAME> <IMAGENAME> bash`
 
-### Create a container and run it
+### Create a container and run it interactively with bash
 `docker run -it <IMAGENAME> bash`
+
+### Wake up a stopped container
+`docker restart <CONTAINERNAME>`
+
+##### add a custom name to this container
+`docker run --name <CustomName>  -it <IMAGENAME> bash`
 
 ### Enter an existing and running container interactively
 `docker exec -it <CONTAINERNAME> bash`
