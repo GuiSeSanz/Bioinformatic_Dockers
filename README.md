@@ -11,7 +11,7 @@
 ### Wake up a stopped container
 `docker restart <CONTAINERNAME>`
 
-##### add a custom name to this container
+### add a custom name to this container
 `docker run --name <CustomName>  -it <IMAGENAME> bash`
 
 ### Enter an existing and running container interactively
@@ -26,6 +26,10 @@
 ### Copy files from the container to the host or vice versa
 `docker cp <src-path> <container>:<dest-path>`
 `docker cp <container>:<src-path> <local-dest-path>`
+
+### Mount a folder to work easily
+Remembre that the modified data on the docker will be modified locally and vice versa!
+'docker run --name <CONTAINERNAME> -v /origin/folder/:/destination/folder/onDocker/ bas'
 
 ### A trabajar!
 <img src="https://media.giphy.com/media/7NoNw4pMNTvgc/giphy.gif" width="150" height="150" />
