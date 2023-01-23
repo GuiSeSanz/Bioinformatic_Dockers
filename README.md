@@ -29,7 +29,7 @@
 
 ### Mount a folder to work easily
 Remembre that the modified data on the docker will be modified locally and vice versa!
-'docker run --name <CONTAINERNAME> -v /origin/folder/:/destination/folder/onDocker/ bas'
+`docker run --name <CONTAINERNAME> -v /origin/folder/:/destination/folder/onDocker/ bash`
 
 ### A trabajar!
 <img src="https://media.giphy.com/media/7NoNw4pMNTvgc/giphy.gif" width="150" height="150" />
